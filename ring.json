@@ -50,7 +50,7 @@
     "data": [
       {
         "name": "tree",
-        "url": "data/flare.json",
+        "url": "https://raw.githubusercontent.com/zdlovett/owl_results/master/data/flare.json",
         "transform": [
           {
             "type": "stratify",
@@ -97,7 +97,7 @@
       },
       {
         "name": "dependencies",
-        "url": "data/flare-dependencies.json",
+        "url": "https://raw.githubusercontent.com/zdlovett/owl_results/master/data/flare-dep.json",
         "transform": [
           {
             "type": "formula",
