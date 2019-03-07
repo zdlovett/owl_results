@@ -1,0 +1,51 @@
+https://api.overwatchleague.com/stats/matches/10279/maps/3
+
+
+owl player stats including player_id -> player name links
+but doesn't seem to have all of the players
+https://api.overwatchleague.com/stats/players
+ex:
+{
+    "playerId": 5197,
+    "teamId": 7697,
+    "role": "offense",
+    "name": "Ado",
+    "team": "WAS",
+    "eliminations_avg_per_10m": 9.120878018300383,
+    "deaths_avg_per_10m": 5.030302422214151,
+    "hero_damage_avg_per_10m": 4405.766315004605,
+    "healing_avg_per_10m": 8807.732276629293,
+    "ultimates_earned_avg_per_10m": 4.422243887660792,
+    "final_blows_avg_per_10m": 2.211121943830396,
+    "time_played_total": 10854.21817958355
+}
+
+
+reddit thread
+https://www.reddit.com/r/Competitiveoverwatch/comments/8z8ysf/the_dream_comes_true_match_stats_are_finally_here/?st=JMRWI85Y&sh=4541ef3b
+reddit api breakdown
+https://www.reddit.com/r/Competitiveoverwatch/comments/7p0e8d/owl_api_analysis/
+
+
+https://api.overwatchleague.com/maps
+
+
+https://api.overwatchleague.com/stats/players?stage_id=regular_season&season=2019
+https://api.overwatchleague.com/stats/players?stage_id=postseason&season=2019
+
+
+https://api.overwatchleague.com/stats/players?stage_id=regular_season&season=2018
+
+
+https://api.overwatchleague.com/matches
+
+
+
+ for match in matches['content']:
+   ...:     teams = [c['abbreviatedName'] for c in match['competitors']]
+   ...:     try:
+   ...:         winner = match['winner']['abbreviatedName']
+   ...:     except KeyError:
+   ...:         continue
+   ...:     else:
+   ...:         short_matches.append((teams, winner))
